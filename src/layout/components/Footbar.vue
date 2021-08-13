@@ -2,17 +2,16 @@
     <div class="app-footbar">
         <b-container>
             <b-navbar toggleable="sm" type="light" variant="light">
-                <b-navbar-toggle target="nav-footer"></b-navbar-toggle>
-                <b-collapse id="nav-footer" is-nav>
-                    <b-navbar-nav>
-                        <b-nav-text>@ 2021 Copyright {{ title }}</b-nav-text>
-                    </b-navbar-nav>
+                <b-navbar-nav>
+                    <b-nav-text>&copy;&nbsp;2021 {{ title }},Partnered with</b-nav-text>
+                    <b-nav-item href="https://ifastnet.com" target="_blank">iFastNet</b-nav-item>
+                </b-navbar-nav>
 
-                    <!-- Right aligned nav items -->
-                    <b-navbar-nav class="ml-auto">
-                        <b-nav-item to="/support">{{ $t('router.support') }}</b-nav-item>
-                    </b-navbar-nav>
-                </b-collapse>
+                <!-- Right aligned nav items -->
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-text>Powered by</b-nav-text>
+                    <b-nav-item href="https://crogram.org" target="_blank">Crogram</b-nav-item>
+                </b-navbar-nav>
             </b-navbar>
         </b-container>
     </div>
@@ -27,7 +26,8 @@ export default {
     props: {},
     data() {
         return {
-            title
+            title,
+            year: 2021 // new Date().getFullYear()
         }
     },
     watch: {},

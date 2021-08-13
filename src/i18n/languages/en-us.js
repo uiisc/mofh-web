@@ -6,15 +6,27 @@ export default {
     },
     common: {
         title: 'site',
-        more: 'More'
+        more: 'More',
+        tips: 'Tips',
+        notice: 'Notice',
+        contact_us: 'Contact Us',
+        about_us: 'About Us'
     },
     router: {
         home: 'Home',
         about: 'About',
         help: 'Help',
-        solution: 'Solution',
+        price: 'Price',
         support: 'Support',
         contact: 'Contact',
-        forum: 'Forum'
+        forum: 'Forum',
+        login: 'Login',
+        signup: 'Sign Up'
+    },
+    user: {
+        signup_for_free: 'Sign up for free'
+    },
+    msg: {
+        in_preparation: 'Thanks for your attention, in preparation'
     }
 }

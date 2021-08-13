@@ -22,7 +22,7 @@ export default {
     activated() {},
     computed: {
         pageTitle() {
-            return this.$route.meta.title || title
+            return this.$route.meta.title ? this.$t(`router.${this.$route.meta.title}`) : title
         }
     },
     created() {},

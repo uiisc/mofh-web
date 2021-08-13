@@ -21,7 +21,7 @@ export default {
             return this.$route.path
         },
         pageTitle() {
-            return this.$route.meta?.title || title
+            return this.$route.meta.title ? this.$t(`router.${this.$route.meta.title}`) : title
         }
     }
 }

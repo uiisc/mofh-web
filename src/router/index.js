@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home/Index.vue'
 
 Vue.use(VueRouter)
 
@@ -8,9 +7,9 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home,
+        component: () => import(/* webpackChunkName: "about" */ '../views/Home/index.vue'),
         meta: {
-            title: '首页'
+            title: 'home'
         }
     },
     {
@@ -19,7 +18,58 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/Home/about.vue'),
+        meta: {
+            title: 'about'
+        }
+    },
+    {
+        path: '/price',
+        name: 'Price',
+        component: () => import(/* webpackChunkName: "price" */ '../views/Home/price.vue'),
+        meta: {
+            title: 'price'
+        }
+    },
+    {
+        path: '/support',
+        name: 'Support',
+        component: () => import(/* webpackChunkName: "support" */ '../views/Home/support.vue'),
+        meta: {
+            title: 'support'
+        }
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: () => import(/* webpackChunkName: "contact" */ '../views/Home/contact.vue'),
+        meta: {
+            title: 'contact'
+        }
+    },
+    {
+        path: '/help',
+        name: 'Help',
+        component: () => import(/* webpackChunkName: "help" */ '../views/Home/help.vue'),
+        meta: {
+            title: 'help'
+        }
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import(/* webpackChunkName: "login" */ '../views/Home/login.vue'),
+        meta: {
+            title: 'login'
+        }
+    },
+    {
+        path: '/signup',
+        name: 'Signup',
+        component: () => import(/* webpackChunkName: "signup" */ '../views/Home/signup.vue'),
+        meta: {
+            title: 'signup'
+        }
     }
 ]
 

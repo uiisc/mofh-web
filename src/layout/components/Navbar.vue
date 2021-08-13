@@ -1,29 +1,31 @@
 <template>
     <div class="app-navbar">
         <b-container>
-            <b-navbar toggleable="sm" type="light" variant="light">
-                <b-navbar-brand href="#">{{ title }}</b-navbar-brand>
+            <b-navbar toggleable="md" type="light" variant="light">
+                <b-navbar-brand to="/">{{ title }}</b-navbar-brand>
 
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav>
                         <b-nav-item to="/">{{ $t('router.home') }}</b-nav-item>
-                        <b-nav-item to="/about">{{ $t('router.about') }}</b-nav-item>
-                        <b-nav-item to="/solution">{{ $t('router.solution') }}</b-nav-item>
-                        <b-nav-item to="/support">{{ $t('router.support') }}</b-nav-item>
+                        <b-nav-item to="/price" :active="$route.path == '/price'">{{ $t('router.price') }}</b-nav-item>
+                        <b-nav-item to="/about" :active="$route.path == '/about'">{{ $t('router.about') }}</b-nav-item>
+                        <b-nav-item to="/support" :active="$route.path == '/support'">{{ $t('router.support') }}</b-nav-item>
                         <!-- <b-nav-item to="#" disabled>Disabled</b-nav-item> -->
                         <b-nav-item-dropdown :text="$t('common.more')">
-                            <b-dropdown-item to="#">{{ $t('router.contact') }}</b-dropdown-item>
-                            <b-dropdown-item to="#">{{ $t('router.help') }}</b-dropdown-item>
+                            <b-dropdown-item to="/contact" :active="$route.path == '/contact'">{{ $t('router.contact') }}</b-dropdown-item>
+                            <b-dropdown-item to="/help" :active="$route.path == '/help'">{{ $t('router.help') }}</b-dropdown-item>
                             <b-dropdown-divider></b-dropdown-divider>
-                            <b-dropdown-item to="#">{{ $t('router.support') }}</b-dropdown-item>
-                            <b-dropdown-item to="#">{{ $t('router.forum') }}</b-dropdown-item>
+                            <b-dropdown-item to="/support" :active="$route.path == '/support'">{{ $t('router.support') }}</b-dropdown-item>
+                            <b-dropdown-item to="/forum" :active="$route.path == '/forum'">{{ $t('router.forum') }}</b-dropdown-item>
                         </b-nav-item-dropdown>
                     </b-navbar-nav>
 
                     <!-- Right aligned nav items -->
                     <b-navbar-nav class="ml-auto">
+                        <b-nav-item to="/login" :active="$route.path == '/login'">{{ $t('router.login') }}</b-nav-item>
+                        <b-nav-item to="/signup" :active="$route.path == '/signup'">{{ $t('router.signup') }}</b-nav-item>
                         <b-nav-item-dropdown text="Lang" right>
                             <b-dropdown-item v-for="(item, index) in lang" :key="index" :active="item.key == locale" @click="changeLocale(item.key)">{{ item.name }}</b-dropdown-item>
                         </b-nav-item-dropdown>
@@ -79,4 +81,8 @@ export default {
 }
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.app-navbar {
+    margin-top: 10px;
+}
+</style>
