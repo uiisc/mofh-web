@@ -1,0 +1,16 @@
+
+html,
+body,
+#app {
+    /* height: 100%; */
+    width: 100%;
+    background-color: #ffffff;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 70px;
+}
