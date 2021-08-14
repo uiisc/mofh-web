@@ -6,7 +6,7 @@
                     Free hosting accounts are activated instantly, no need to wait for manual approval, you can start building your pages immediately! A powerful Vista Panel control panel is provided to manage your website, packed with hundreds of great features including Email, FTP add-on domain
                     ...
                 </p>
-                <b-button variant="outline-primary" href="/signup">{{ $t('user.signup_for_free') }}</b-button>
+                <b-button variant="outline-primary" to="/signup">{{ $t('signup_for_free') }}</b-button>
             </b-jumbotron>
         </b-container>
         <b-container class="bv-example-row">

@@ -1,9 +1,9 @@
 <template>
-    <div class="about">
+    <div class="price-container">
         <b-container>
             <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 class="display-4">{{ $t('router.price') }}</h1>
-                <p class="lead">价格方案</p>
+                <h1 class="display-4">{{ $t('price') }}</h1>
+                <p class="lead">{{ $t('price_plan') }}</p>
             </div>
             <b-card-group deck>
                 <b-card class="text-center">
@@ -18,7 +18,7 @@
                             <li>Email support</li>
                             <li>Help center access</li>
                         </ul>
-                        <b-button block variant="outline-primary">{{ $t('user.signup_for_free') }}</b-button>
+                        <b-button block variant="outline-primary">{{ $t('signup_for_free') }}</b-button>
                     </b-card-body>
                 </b-card>
                 <b-card class="text-center">
@@ -48,7 +48,7 @@
                             <li>Priority email support</li>
                             <li>Help center access</li>
                         </ul>
-                        <b-button block variant="primary" @click="waitToast()">{{ $t('common.contact_us') }}</b-button>
+                        <b-button block variant="primary" @click="waitToast()">{{ $t('contact_us') }}</b-button>
                     </b-card-body>
                 </b-card>
             </b-card-group>
@@ -68,7 +68,7 @@ export default {
     methods: {
         waitToast() {
             this.$bvToast.toast(this.$t('msg.in_preparation'), {
-                title: this.$t('common.tips'),
+                title: this.$t('tips'),
                 variant: 'info',
                 solid: true
             })

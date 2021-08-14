@@ -2,7 +2,7 @@
     <div class="support">
         <b-container>
             <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 class="display-4">{{ $t('router.support') }}</h1>
+                <h1 class="display-4">{{ $t('support') }}</h1>
                 <!-- <p class="lead">价格方案</p> -->
             </div>
             <b-card-group deck>

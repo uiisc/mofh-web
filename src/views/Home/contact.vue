@@ -2,7 +2,7 @@
     <div class="contact">
         <b-container>
             <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 class="display-4">{{ $t('common.contact_us') }}</h1>
+                <h1 class="display-4">{{ $t('contact_us') }}</h1>
             </div>
             <p>If you have any problems or have the need to contact us to ask a question, you can use the integrated support system in your control panel to create a support ticket.</p>
 

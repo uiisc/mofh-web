@@ -143,7 +143,7 @@ module.exports = {
         'no-plusplus': 0,
         // allow optionalDependencies
         'import/no-extraneous-dependencies': [0],
-        'max-len': ['error', { code: 300 }],
+        // 'max-len': ['error', { code: 300 }],
         'object-curly-newline': 0, // 关闭此规则：在对象文字或解构赋值的大括号内强制执行一致的换行符。
         'no-nested-ternary': 0, // 关闭此规则：不允许嵌套的三元表达式
         'prefer-destructuring': [
